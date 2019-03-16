@@ -1,0 +1,45 @@
+server:
+  port: 9095
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:33061/testdb
+    driver: org.mariadb.jdbc.Driver
+    username: root
+    password: example
+    # # config
+    # testWhileIdle: true
+    # validationQuery: SELECT 1
+    # # === connection pool ===
+    # initialSize: 5
+    # minIdle: 5
+    # maxActive: 20
+    # maxWait: 60000
+    # timeBetweenEvictionRunsMillis: 60000
+    # # === connection survival time ===
+    # minEvictableIdleTimeMillis: 300000
+    # validationQuery: SELECT 1 FROM DUAL
+    # testWhileIdle: true
+    # testOnBorrow: false
+    # testOnReturn: false
+    # # PSCache size
+    # poolPreparedStatements: true
+    # maxPoolPreparedStatementPerConnectionSize: 20
+
+  jpa:
+    show-sql: true
+  
+
+spring.output.ansi.enabled: ALWAYS
+
+spring.jpa.properties.hibernate.hbm2ddl.auto: update
+
+
+
+# javax.persistence:
+#   schema-generation.database.action: drop-and-create
+
+
+
+
+
