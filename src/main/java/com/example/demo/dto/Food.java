@@ -1,5 +1,6 @@
 package com.example.demo.dto;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -12,10 +13,11 @@ import com.example.demo.Constant.Category;
 @Entity
 public class Food {
   @Id
-  @GeneratedValue(strategy=GenerationType.AUTO)
+  @GeneratedValue(strategy=GenerationType.IDENTITY)
   private Long id;
 
   private String foodName;
+  @Column(precision = 8, scale = 1)
   private float price;
   private int quantity;  
 
